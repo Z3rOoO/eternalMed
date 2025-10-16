@@ -1,0 +1,267 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: var(--colorFundo);
+
+
+}
+
+:root {
+    --colorVerdeEscuro: #538d7f;
+    --colorVerdeClaro: #b8d6ce;
+    --colorVerdeMuitoClaro: #dfece9;
+    --colorFundo: rgb(255, 255, 255);
+}
+
+.mainTopHome {
+    max-width: none;
+    margin-top: 55px;
+}
+
+.mainTopHomeNav {
+
+    height: 500px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.rowTopHomeNav {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainTopHomeNavCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mainTopHomeNav .col-4 {
+
+    height: 150px;
+    max-width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.colTopHomeNav {
+    color: var(--colorVerdeEscuro);
+    background-color: var(--colorVerdeMuitoClaro);
+}
+
+.colTopHomeNav:hover {
+    background-color: var(--colorVerdeClaro);
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.cor {
+    background-color: var(--colorVerdeEscuro);
+    color: var(--colorVerdeMuitoClaro);
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+.cor:hover {
+    background-color: var(--colorVerdeEscuro);
+    color: var(--colorVerdeMuitoClaro);
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.mainTopHomeInfo {
+    display: flex;
+    width: 50%;
+    height: 500px;
+    padding: 8px;
+    
+    
+}
+
+.imgInfoTop {
+    background-color: var(--colorVerdeClaro);
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+    
+}
+
+@media (max-width: 1200px) {
+
+
+
+    .mainTopHomeNav .col-4 {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 991px) {
+
+
+    .rowTopHomeNav {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mainTopHomeNav .col-4 {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 767px) {
+    .mainTopHomeInfo {
+        width: 100%;
+
+    }
+
+    .mainTopHomeNavCol {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mainTopHomeNav {
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .mainTopHomeNav .col-4 {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 533px) {
+
+    .mainTopHomeNav .col-4 {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 443px) {
+    .mainTopHomeNav {
+        height: auto;
+    }
+
+    .mainTopHomeNav .col-4 {
+
+        max-width: 100px;
+    }
+}
+
+/*------------------------FOOTER----------------*/
+.footer {
+    display: flex;
+}
+
+.img {
+
+    justify-self: center;
+}
+
+@media (max-width:1050px) {
+    .navFooter {
+        flex-wrap: nowrap;
+
+    }
+}
+
+@media (max-width:767px) {
+    .footer {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .arroba {
+        max-width: 350px;
+        padding-bottom: 20px;
+    }
+
+    .navFooter {
+        max-width: 350px;
+    }
+
+
+}
+
+/*------------------------HEDER----------------*/
+.mover {
+    /*animação do mover barra lateral*/
+    transform: translatex(-300px);
+    transition: .5s;
+}
+
+.virarmenu {
+    /*animação do menu*/
+    filter: brightness(100);
+    transform: rotate(90deg);
+    transition: .1s;
+}
+
+.mudaCperfil {
+    filter: brightness(100);
+    transition: .1s;
+}
+
+.borrar {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.514);
+    z-index: 2;
+    backdrop-filter: blur(1.5px);
+    transition: .5s;
+}
+
+.destravarmouse {
+    pointer-events: none;
+}
+
+.opcaoMenu {
+    color: #ffffff;
+    margin-top: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.opcaoMenuSelecionado {
+    color: #538d7f;
+    margin-top: 5px;
+    background-color: #b8d6ce;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
+}
