@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const path = require('path');
-
+const loginPath = require('./private/routes/login');
+const cadastroPath = require('./private/routes/cadastro');
+const userPath = require('./private/routes/user');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -10,6 +12,10 @@ app.use(express.json());
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'public')));
+
+app.use('/api/login', loginPath);
+app.use('/api/cadastro', cadastroPath);
+app.use('/api/users', userPath);
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'index.html'));
