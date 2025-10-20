@@ -26,8 +26,8 @@
                     style="width: 50%; max-width: 610px; background: #dfece9; border-radius: 1vw;">
                     <!-- barra de navegação -->
                     <form class="d-flex" role="search">
-                        <button type="submit" style="background: transparent; border: none;"><img src="./images/lupa.png"
-                                alt="pesquisar" width="18"></button>
+                        <button type="submit" style="background: transparent; border: none;"><img
+                                src="./images/lupa.png" alt="pesquisar" width="18"></button>
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             style="background: transparent; border: none; box-shadow: none;" />
                         <button type="submit" style="background: transparent; border: none;"><img
@@ -87,33 +87,42 @@
                             <div class="col-12 col-md-6 order-2 order-md-1 mainTopHomeNavCol">
                                 <div class="container mainTopHomeNav">
                                     <div class="row g-5 rowTopHomeNav">
-                                        <div class="col-4 colTopHomeNav off" data-num="agendamento">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"Medicamentos","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             1
                                         </div>
-                                        <div class="col-4 colTopHomeNav off" data-num="psicologia">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"Medicamentos","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             2
                                         </div>
-                                        <div class="col-4 colTopHomeNav off" data-num="nutrição">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"Medicamentos","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             3
                                         </div>
 
-                                        <div class="col-4 colTopHomeNav off" data-num="fisioterapia">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"Medicamentos","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             4
                                         </div>
-                                        <div class="col-4 colTopHomeNav off" data-num="quiropraxia">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"Medicamentos","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             5
                                         </div>
-                                        <div class="col-4 colTopHomeNav off" data-num="medicina">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"Medicamentos","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             6
                                         </div>
 
-                                        <div class="col-4 colTopHomeNav off" data-num="seguro de vida">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"Medicamentos","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             7
                                         </div>
-                                        <div class="col-4 colTopHomeNav off" data-num="banana">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"SEGURO DE VIDA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             8
                                         </div>
-                                        <div class="col-4 colTopHomeNav off" data-num="funeraria">
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"img":"./images/medicamentos.png","titulo":"funeraria","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
                                             9
                                         </div>
                                     </div>
@@ -124,7 +133,25 @@
                                     <div class="row">
                                         <div class="col-12 ">
                                             <div id="conteudo" class="conteudo">
-                                                Clique em um número à esquerda para mudar o conteúdo aqui.
+                                                <div class="container">
+                                                    <div class="row rowImgConteudo">
+                                                        <div class="col imgConteudo">
+                                                            <h1>agenda</h1>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row rowTextConteudo">
+                                                        <div class="col">
+                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Mollitia sunt eaque odit qui magnam, nobis inventore
+                                                                temporibus, repudiandae ab voluptatem minima iusto
+                                                                exercitationem facere. Nisi, numquam harum. Atque,
+                                                                quisquam odio?</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row rowButtonConteudo">
+                                                        <div class="col"><a href=""><button>cadastrar</button></a></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -260,11 +287,36 @@
         botoes.forEach(btn => {
             btn.addEventListener('click', () => {
 
-                const area = btn.dataset.num;
-                conteudo.innerHTML = `
-          <h2>AREA DE ${area}</h2>
-          <p>Você clicou na caixa <strong>${area}</strong>!</p>
-        `;
+                try {
+                    // Converte o conteúdo do data-num em um objeto JS
+                    const dados = JSON.parse(btn.dataset.num);
+
+                    // Monta o HTML dinamicamente
+                    conteudo.innerHTML = `
+                    <div class="container">
+                      <div class="row rowImgConteudo">
+                        <div class="col imgConteudo">
+                          <img src="${dados.img}" alt="${dados.titulo}" width="100%">
+                          <h1>${dados.titulo}</h1>
+                        </div>
+                      </div>
+                      <div class="row rowTextConteudo">
+                        <div class="col">
+                          <p>${dados.descricao}</p>
+                        </div>
+                      </div>
+                      <div class="row rowButtonConteudo">
+                        <div class="col">
+                          <a href="${dados.link}">
+                            <button>${dados.button}</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                } catch (err) {
+                    console.error("Erro ao ler os dados:", err);
+                }
             });
         });
     </script>
