@@ -175,7 +175,331 @@ body {
     }
 }
 
-/*------------------------FOOTER----------------*/
+
+/* -------------------------------------- menu lateral */
+
+.mover {
+    /*animação do mover barra lateral*/
+    transform: translatex(-300px);
+    /*mostra a div do menu lateral*/
+    transition: .5s;
+    /*animação em .5 segundos*/
+}
+
+.virarmenu {
+    /*animação do menu*/
+    filter: brightness(100);
+    /*troca a cor do menu para branco*/
+    transform: rotate(90deg);
+    /*gira o botão menu*/
+    transition: .1s;
+    /*transição de .1 segundos*/
+}
+
+.mudaCperfil {
+    filter: brightness(100);
+    /*troca a cor do perfil para branco*/
+    transition: .1s;
+    /*transição de .1 segundo*/
+}
+
+.borrar {
+    position: fixed;
+    /*deixa a imagem fixa na tela*/
+    height: 100%;
+    /* altura 100% */
+    width: 100%;
+    /* largura 100% */
+    background: rgba(58, 58, 58, 0.452);
+    /*escurece a tela*/
+    z-index: 2;
+    /* camada do item na tela */
+    backdrop-filter: blur(2px);
+    /*faz um borrão na div*/
+    transition: .5s;
+    /*transição de .5 segundos*/
+}
+
+.destravarmouse {
+    pointer-events: none;
+    /* deixa o usuario clicar através da div*/
+}
+
+.opcaoMenu {
+    color: #ffffff;
+    /*cor da letra*/
+    height: 50px;
+    /*altura do bloco do menu*/
+    display: flex;
+    /*deixa o display flexivel*/
+    align-items: center;
+    /*centraliza o texto da div*/
+    padding-left: 10px;
+    /*espaçamento no lado esquerdo da div*/
+    width: 100%;
+    /*largura da opção do menu*/
+    transition: ease .5s;
+}
+
+.opcaoMenu:hover {
+    transform: scale(1.02);
+    /*tranforma o tamanho do item*/
+    transition: ease 0s;
+    /*transição em 0 segundos*/
+    background-color: #b8d6ce50;
+    /*coloca uma cor no fundo do texto*/
+}
+
+.opcaoMenuSelecionado {
+    color: #538d7f;
+    /* muda cor do texto*/
+    margin-top: 5px;
+    /*espaçamento do topo*/
+    background-color: #b8d6ce;
+    /*coloca uma cor no fundo do texto*/
+    height: 50px;
+    /*altura do bloco*/
+    width: 100%;
+    /*largura do bloco*/
+    display: flex;
+    /*deixa o display flexivel*/
+    align-items: center;
+    /*centraliza o texto da div*/
+    padding-left: 10px;
+    /*espaçamento no lado esquerdo da div*/
+}
+
+/* ------------------------------------------- primeiro banner do index */
+
+.textoBanner {
+    max-width: 520px;
+    min-width: 200px;
+    color: #05805f;
+    padding-left: 10px;
+}
+
+.textoBanner span {
+    color: #90c6b1;
+}
+
+.botoesAp {
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.btnAc {
+    font-size: 30px;
+    color: white;
+    background: #05805f;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 5px;
+    transition: ease .1s;
+}
+
+.btnAc:hover {
+    transform: scale(1.1);
+    background: #599385;
+}
+
+
+/* ---------------------------- balões de conversa do index */
+
+.balaoUmIndex {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    border: .3vw solid #05805f;
+    border-radius: 2vw;
+    border-top-right-radius: 0px;
+    width: 35vw;
+    font-size: 3.5vw;
+    color: white;
+    background: #05805f;
+}
+
+
+
+.balaoDoisIndex {
+    position: absolute;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    border: .3vw solid #05805f;
+    border-radius: 2vw;
+    border-top-left-radius: 0px;
+    width: 80vw;
+    font-size: 3.5vw;
+    color: white;
+    background: #05805f;
+}
+
+
+/* ---------------------------- segundo banner do index */
+
+.textoBanner2 {
+    display: flex;
+    justify-content: center;
+    color: #05805f;
+    font-size: 56px;
+    width: 27vw;
+}
+
+.textoBanner2 span {
+    color: #90c6b1;
+}
+
+
+
+.personagemMic {
+    display: flex;
+    max-width: 1200px;
+    min-width: 230px;
+    right: 0;
+    pointer-events: none;
+}
+
+
+.btnContato {
+    font-size: 1.8vw;
+    color: white;
+    background: #05805f;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 5px;
+    transition: ease .1s;
+    width: 17vw;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    /*tira decoração do texto (utilizado quando é usado a tag 'A' )*/
+}
+
+/* ----------------------------------- mudança de tamanho de fonte conforme o tamanho da tela */
+@media (max-width:2920px) {
+    .textoBanner {
+        font-size: 76px;
+    }
+
+    .textoBanner2 {
+        font-size: 66px;
+    }
+
+}
+
+@media (max-width:1345px) {
+    .botoesAp {
+        width: 350px;
+    }
+}
+
+
+@media (max-width:1227px) {
+    .textoBanner {
+        font-size: 56px;
+    }
+
+    .textoBanner2 {
+        font-size: 56px;
+    }
+
+    .btnAc {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width:880px) {
+    .textoBanner {
+        font-size: 46px;
+    }
+
+    .textoBanner2 {
+        font-size: 46px;
+    }
+
+    .btnAc {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width:730px) {
+    .textoBanner {
+        font-size: 36px;
+    }
+
+    .textoBanner2 {
+        font-size: 36px;
+    }
+
+    .btnAc {
+        font-size: 20px;
+    }
+
+    .botoesAp {
+        width: 280px;
+    }
+}
+
+@media (max-width:630px) {
+    .textoBanner {
+        font-size: 35px;
+    }
+
+    .textoBanner2 {
+        font-size: 35px;
+    }
+
+    .btnAc {
+        font-size: 19px;
+    }
+
+}
+
+@media (max-width:545px) {
+    .textoBanner {
+        font-size: 25px;
+    }
+
+    .textoBanner2 {
+        font-size: 25px;
+        margin-left: 3vw;
+    }
+
+    .btnAc {
+        font-size: 12px;
+    }
+
+    .btnContato {
+        font-size: 12px;
+        width: 29vw;
+
+    }
+
+    .botoesAp {
+        width: 200px;
+    }
+
+}
+
+
+/* ------------------------------------------- footer */
 .footer {
     display: flex;
 }
@@ -210,60 +534,6 @@ body {
     }
 
 
-}
-
-/*------------------------HEDER----------------*/
-.mover {
-    /*animação do mover barra lateral*/
-    transform: translatex(-300px);
-    transition: .5s;
-}
-
-.virarmenu {
-    /*animação do menu*/
-    filter: brightness(100);
-    transform: rotate(90deg);
-    transition: .1s;
-}
-
-.mudaCperfil {
-    filter: brightness(100);
-    transition: .1s;
-}
-
-.borrar {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.514);
-    z-index: 2;
-    backdrop-filter: blur(1.5px);
-    transition: .5s;
-}
-
-.destravarmouse {
-    pointer-events: none;
-}
-
-.opcaoMenu {
-    color: #ffffff;
-    margin-top: 5px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    width: 100%;
-}
-
-.opcaoMenuSelecionado {
-    color: #538d7f;
-    margin-top: 5px;
-    background-color: #b8d6ce;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    width: 100%;
 }
 
 /*------------------------------------------Login--------------------------------------*/

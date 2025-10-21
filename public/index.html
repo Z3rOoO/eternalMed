@@ -2,71 +2,259 @@
 <html lang="pt-br">
 
 <head>
-    <title>EthernalMed</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EternalMed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="imagens/logoEthernal.png" alt="EthernalMed" width="30" height="24">
-                </a>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                    <form class="d-flex me-auto" role="search">
-                        <div class="ytSearchboxComponentInputBox ytSearchboxComponentInputBoxDark">
-                            <form action="/results" class="ytSearchboxComponentSearchForm"><input
-                                    class="ytSearchboxComponentInput yt-searchbox-input title" name="search_query"
-                                    aria-controls="i0" aria-expanded="true" type="text" autocomplete="off"
-                                    autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox"
-                                    placeholder="Search"></form>
-                        </div>
-                    </form>
-                    <a href="#"><img src="./images/user.png" class="ima-header" alt="User"></a>
-                    <a href="#"><img src="./images/config.png" class="ima-header" alt="Barra"></a>
+    <header id="header"> <!-- cabeçalho do site -->
+        <nav class="navbar navbar-expand-lg"
+            style="background: white; border-bottom: 3px solid #538d7f; height: 55px; position: fixed; width: 100%; z-index: 1;">
+            <div class="container-fluid">
+                <div
+                    style="width: 130px; display: flex; align-items: center; justify-content: space-between; position: absolute;">
+                    <img src="images/EternalMed.png" alt="logoEternalMed" width="24"> <a class="navbar-brand p-0"
+                        href="#" style="color: #538d7f; margin-right: 0;">EternalMed </a>
                 </div>
-
+                <!-- logo e titulo do header-->
+                <div class="container d-none d-sm-block"
+                    style="width: 50%; max-width: 610px; background: #dfece9; border-radius: 1vw;">
+                    <!-- barra de navegação -->
+                    <form class="d-flex" role="search">
+                        <button type="submit" style="background: transparent; border: none;"><img src="images/lupa.png"
+                                alt="pesquisar" width="18"></button>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            style="background: transparent; border: none; box-shadow: none;" />
+                        <button type="submit" style="background: transparent; border: none;"><img
+                                src="images/microfone.png" alt="pesquisar" width="18"></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <nav>
+            <div
+                style="width: 70px; position: absolute; right: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 4; height: 50px; position: fixed;">
+                <a href="#"><img src="images/perfil.png" alt="perfil" width="30" id="perfil"
+                        style="transition: .2s;"></a>
+                <!-- botao perfil do header -->
+                <a onclick="menu" onclick="return false;" href="#"><img src="images/menu.png" alt="perfil" width="26"
+                        id="menu" style="transition: .2s;"></a> <!-- botao menu do header-->
+            </div>
         </nav>
     </header>
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col"></div>
+    <div class="container-fluid p-0" style="height: 100%;"> <!-- menu lateral -->
+        <div class="row m-0">
+            <div class="col p-0" style="display: flex; justify-content: flex-end;">
+                <div style="display: flex; height: 100%; min-width:300px; max-width:333.8px; background:#538d7f; position: fixed; border-left: 3px solid #b8d6ce; right: -300px; transition: .3s; flex-direction: column; z-index: 3;"
+                    id="barralateral"> <!-- bloco da barra lateral-->
+                    <a href="">
+                        <div class="opcaoMenuSelecionado" style="margin-top: 55px;">
+                            <img src="images/EternalMed.png" alt="TelaInicial" width="24px">
+                            <p style="margin: 0; margin-left: 5px;">Tela Inicial</p> <!-- item da barra lateral -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="opcaoMenu">
+                            <img src="images/menuLateral/duvida.png" alt="Duvidas" width="24px" style="filter: brightness(100);">
+                            <p style="margin: 0; margin-left: 5px;">Dúvidas</p> <!-- item da barra lateral -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="opcaoMenu">
+                            <img src="images/perfil.png" alt="Contato" width="24px" style="filter: brightness(100);">
+                            <p style="margin: 0; margin-left: 5px;">Contato</p> <!-- item da barra lateral -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="borrar" class="destravarmouse"
+                style="position: fixed; height: 100%; width: 100%; transition: .5s; z-index: 2;">
+                <!-- borra o fundo ao abrir o menu lateral-->
+            </div>
         </div>
 
-    </div>
+        <div class="container-fluid"> <!-- primeiro banner -->
+            <div class="row">
+                <div class="col p-0"
+                    style="margin-top: 55px; background: #e0e8e6; display: flex; align-items: center; justify-content: center;">
+                    <div class="row-3">
+                        <h1 class="textoBanner">FACILITE <span>SUAS</span> CONSULTAS <span>COM A</span> ETERNALMED</h1>
+                        <div class="row-12 botoesAp ml-0 ">
+                            <h1><a href="#" class="btnAc">ACESSAR</a></h1>
+                            <h1><a href="cadastro.html" class="btnAc">CADASTRAR</a></h1>
+                        </div>
+                    </div>
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-body-secondary">© 2025 Company, Inc</p> <a href="/"
-            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-            aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-                <use xlink:href="#bootstrap"></use>
-            </svg> </a>
-        <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-        </ul>
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+                    <img src=" images/bannerIndex/doisPersonagemConsulta.png" alt="doisPersonagensConsulta"
+                        style="min-width: 230px; max-width: 800px;"> <!-- imagem personagens da apresentação-->
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-5">
+            <div class="row" style="margin-top: 20vw;">
+                <div class="col">
+                    <h1 class="balaoUmIndex">quem somos?</h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20vw;">
+                <div class="col">
+                    <h1 class="balaoDoisIndex">somos uma empresa que facilita seus agendamentos e consultas.</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="margin-top: 40vw;"> <!-- segundo banner-->
+            <div class="row">
+                <div class="col p-0"
+                    style=" background: #e0e8e6; display: flex; align-items: center; justify-content: space-between; min-height: 215px; max-height: 600px;">
+                    <div style="margin-left: 15vw;">
+                        <div class="row-12">
+                            <h1 class="textoBanner2">venha ser um dos nossos colaboradores</h1>
+                        </div>
+                        <div class="row-12">
+                            <h1 class="mt-5"><a href="#" class="btnContato">entrar em contato!</a></h1>
+                        </div>
+                    </div>
+                    <img src=" images/bannerIndex/personagemComMic.png" alt="personagemComMic"
+                        class="personagemMic"><!-- imagem personagem com microfone-->
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <div class="container-fluid mt-2">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                            style="background-color: #b8d6ce">
+                            Quem somos?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" style="color: #b8d6ce"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Somos uma que <strong>FACILITA</strong> seus <strong>AGENDAMENTOS E CONSULTAS</strong>. A
+                            <strong>EternalMed</strong> é uma empresa de medicina especializada em serviços como,
+                            nutricionista, fisioterapia, quiropraxia. Além disso nossos clientes conseguem comprar
+                            remédios
+                            e agendar consultas de uma forma rápida e fácil.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                            style="background-color: #a2cfc3">
+                            O que fazemos?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                        style="color: #a2cfc3">
+                        <div class="accordion-body">
+                            A <strong>EthernalMed</strong> promove a <strong>saúde</strong> e o
+                            <strong>bem-estar</strong>
+                            dos clientes acima de tudo, nosso catálogo é composto tanto por remédios, até por serviços
+                            particulares e especializados como, quiropraxia, nutricionista e muito mais.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                            style="background-color: #8ac9b8">
+                            Venha ser um colaborador!
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                        style="color: #8ac9b8">
+                        <div class="accordion-body">
+                            Agora a <strong>EternalMed</strong> está aprovando parcerias com novas empresas. Basta nos
+                            enviar um email: <strong>eternalmedcolaborador@gmail.com</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                            style="background-color: #74c5af">
+                            Contate-nos
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                        style="color: #74c5af">
+                        <div class="accordion-body">
+                            A <strong>EternalMed</strong> possui diversos meios de comunicação.<br>Telefone - 99
+                            99999-9999<br>Email - eternalmed@gmail.com<br>Instagram - @EthernalMed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col ">
+                    <footer
+                        class=" justify-content-between align-items-center py-2 my-4 border-top border-success border-3 footer">
+                        <p class="col-md-4 mb-0 px-3 arroba" style="color: #538d7f;">© 2025 EternalMed, Inc </p> <a
+                            href="/"
+                            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+                            aria-label="Bootstrap">
+                            <img class="bi img " width="30" aria-hidden="true" src="images/EternalMed.png">
+
+                        </a>
+
+                        <ul class="nav col-md-4 col-sm-12  justify-content-end px-3 navFooter">
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">Home</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">Features</a>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">Pricing</a>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">FAQs</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">About</a></li>
+                        </ul>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- script do menu -->
+
+        <script>
+            //script do menu lateral
+            const barraL = document.getElementById('barralateral') // pega o id da barra lateral
+            const menu = document.getElementById('menu'); // pega o id do menu
+            const perfil = document.getElementById('perfil') // pega o id do perfil
+            const borrar = document.getElementById('borrar') // pega o id da div borrar
+            const body = document.getElementById('body') // pega o id do body
+
+            menu.addEventListener("click", () => { // adiciona um evento ao clicar no menu
+                barraL.classList.toggle('mover') // adiciona a classe 'mover' na barra lateral
+                menu.classList.toggle('virarmenu') // vira os tres tracinhos do menu e muda a cor
+                perfil.classList.toggle('mudaCperfil') // vira os tres tracinhos do menu e muda a cor
+                borrar.classList.toggle('borrar') // deixa o fundo escuro e borrado ao apertar no menu
+                borrar.classList.toggle('destravarmouse') // quando o menu estiver aberto, ele vai travar o mouse
+            })
+        </script>
+
+        <!-- script do bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

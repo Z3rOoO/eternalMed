@@ -36,7 +36,7 @@ router.get('/:id', autenticar, (req, res) => {
 
 
 
-rrouter.put('/:id', autenticar, (req, res) => {
+router.put('/:id', autenticar, (req, res) => {
     const id = parseInt(req.params.id)
     const editTar = req.body
 
