@@ -6,7 +6,7 @@
 //     })
 // }
 
-const form = document.getElementById('formCadastro');
+const form = document.getElementById('formCadasto');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
