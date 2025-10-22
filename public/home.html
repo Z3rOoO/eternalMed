@@ -88,48 +88,51 @@
                                 <div class="container mainTopHomeNav">
                                     <div class="row g-5 rowTopHomeNav">
                                         <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"FARMACIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            FARMACIA
+                                            data-num='{"class":"farmacia","titulo":"FARMACIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/farmacia.png" alt="">
+                                            <h1>FARMACIA</h1>
                                         </div>
                                         <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"CONSULTAS","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            CONSULTAS
+                                            data-num='{"class":"consultas","titulo":"CONSULTAS","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/consultas.png" alt="">
+                                            <h1>CONSULTAS</h1>
                                         </div>
                                         <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"AGENDAMENTOS","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            AGENDAMENTOS
-                                        </div>
-
-                                        <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"QUIROPRAXIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            <img src="" alt="">
-                                            QUIROPRAXIA
-                                        </div>
-                                        <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"FISIOTERAPIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            <img src="" alt="">
-                                            FISIOTERAPIA
-                                        </div>
-                                        <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"PSICOLOGIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            <img src="" alt="">
-                                            PSICOLOGIA
+                                            data-num='{"class":"agendamento","titulo":"AGENDAMENTOS","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/agendamento.png" alt="">
+                                            <h1>AGENDAMENTOS</h1>
                                         </div>
 
                                         <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"NUTRICIONISTA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            <img src="" alt="">
-                                            NUTRICIONISTA
+                                            data-num='{"class":"quiropraxia","titulo":"QUIROPRAXIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/quiropraxia.png" alt="">
+                                            <h1>QUIROPRAXIA</h1>
                                         </div>
                                         <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"SEGURO DE VIDA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            <img src="" alt="">
-                                            SEGURO DE VIDA
+                                            data-num='{"class":"fisioterapia","titulo":"FISIOTERAPIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/fisioterapia.png" alt="">
+                                            <h1>FISIOTERAPIA</h1>
                                         </div>
                                         <div class="col-4 colTopHomeNav off"
-                                            data-num='{"titulo":"FUNERÁRIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
-                                            <img src="" alt="">
-                                            FUNERÁRIA
+                                            data-num='{"class":"psicologia","titulo":"PSICOLOGIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/psicologia.png" alt="">
+                                            <h1>PSICOLOGIA</h1>
+                                        </div>
+
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"class":"nutricionista","titulo":"NUTRICIONISTA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/nutricionista.png" alt="">
+                                            <h1>NUTRICIONISTA</h1>
+                                        </div>
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"class":"seguro","titulo":"SEGURO DE VIDA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/seguroDeVida.png" alt="">
+                                            <h1>SEGURO</h1>
+                                        </div>
+                                        <div class="col-4 colTopHomeNav off"
+                                            data-num='{"class":"funeraria","titulo":"FUNERÁRIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            <img src="./images/homeImages/funeraria.png" alt="">
+                                            <h1>FUNERÁRIA</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -286,6 +289,7 @@
             });
         });
     </script>
+    
     <script>
         const conteudo = document.getElementById('conteudo');
         const botoes = document.querySelectorAll('.rowTopHomeNav div');
@@ -300,7 +304,7 @@
                     // Monta o HTML dinamicamente
                     conteudo.innerHTML = `
                     <div class="container">
-                      <div class="row rowImgConteudo">
+                      <div class="row rowImgConteudo ${dados.class}">
                         <div class="col imgConteudo">
                           <h1>${dados.titulo}</h1>
                         </div>
