@@ -70,6 +70,8 @@ body {
 .colTopHomeNav {
     color: var(--colorVerdeEscuro);
     background-color: var(--colorVerdeMuitoClaro);
+
+
 }
 
 .colTopHomeNav:hover {
