@@ -25,21 +25,38 @@ cpf.addEventListener('input', () => { // função para validar o cpf enquanto di
     }
         cpf.value = valor;
 
+
 })
+
+    cpf.addEventListener('keypress', (e) => { // previne que o usuário possa digitar letras no campo do cpf
+    const char = String.fromCharCode(e.which || e.keyCode);
+    if (!/[0-9]/.test(char)) e.preventDefault();
+});
 
 // --------------------------------------------------------------------------------------------------------------------- NOME
 
 nome.addEventListener('input', () => { // função para validar o nome enquanto digita
     const validarNome = document.getElementById('validarNome') //pega o id do nome
     const nome = document.getElementById('nome').value; //pega o valor do nome
-    if(nome.length < 3){ // caso o nome tenha menos de 3 caracteres
-        validarNome.innerText = 'O nome deve conter no mínimo 3 caracteres.' // mostra a mensagem de aviso
+    if(nome.length < 10){ // caso o nome tenha menos de 10 caracteres
+        validarNome.innerText = 'O nome deve conter no mínimo 10 caracteres.' // mostra a mensagem de aviso
+        return
+    }
+    else if (/[0-9]/.test(nome)) { // caso o nome tenha números
+        validarNome.innerText = 'O nome não pode conter números.' // mostra a mensagem de aviso
         return
     }
     else {
         validarNome.innerText = '' // caso tenha 3 digitos, não mostra nada
     }
 })
+
+nome.addEventListener('keypress', (e) => { // previne que o usuário possa digitar números no campo do nome
+    const char = String.fromCharCode( e.which || e.keycode);
+    if(!/[a-zA-Z\s]/.test(char)) e.preventDefault();
+});
+
+
 
 // ----------------------------------------------------------------------------------------------------- telefone
 
@@ -74,6 +91,7 @@ form.addEventListener('submit', async (e) => { //função de submit do form
     const senha = document.getElementById('senha').value; //pega o valor da senha
     const conSenha = document.getElementById('confirmaSenha').value; //pega o valor da confirmação de senha
     const validarSenha = document.getElementById('validacaosenha'); //pega o id da validação de senha
+    id = Date.now(); // cria um id único baseado no horário atual
 
     if (senha !== conSenha) { //verifica se a senha e a confirmação de senha são iguais
         validarSenha.innerText = 'As senhas não coincidem. Por favor, tente novamente.'; //mostra a mensagem de erro
@@ -90,13 +108,27 @@ form.addEventListener('submit', async (e) => { //função de submit do form
         return
     }
 
+    if (senha.length < 8){
+        alert('A senha deve conter no mínimo 8 caracteres.');
+        return
+    }
+    else if (/[0-9]/.test(nome)) { // caso o nome tenha números
+         alert('O nome não pode conter números.') // mostra a mensagem de aviso
+        return
+    }
+
     const res = await fetch('/api/cadastro', { // curl direto no fetch
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': 'bah' },
-        body: JSON.stringify({ nome, email, tel, cpf, dataNasc, senha })
+        body: JSON.stringify({ nome, email, tel, cpf, dataNasc, senha, id})
     })
 
-
     const data = await res.json();
+
+    if(res.ok){
+        window.location.href = '/login'; // Redireciona para a página de login
+    }
+
     alert(data.message);
 })
+

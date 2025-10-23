@@ -3,7 +3,7 @@ const fs = require('fs')
 const autenticar = require('../middlewares/autenticacao')
 const router = express.Router()
 
-router.post('/', (req, res) => {
+router.post('/', autenticar, (req, res) => {
     const novaTar = req.body
     console.log(novaTar)
 
@@ -16,6 +16,7 @@ router.post('/', (req, res) => {
             const cpf = req.body.cpf
             const email = req.body.email
             const tel = req.body.tel
+            
 
             if (dados.some(user => user.cpf === cpf)) {
                 return res.status(400).json({ message: 'esse CPF já está cadastrado no sistema. Por favor, utilize outro CPF.' })

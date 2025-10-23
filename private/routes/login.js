@@ -4,26 +4,26 @@ const autenticar = require('../middlewares/autenticacao')
 const router = express.Router()
 
 router.post('/', autenticar, (req, res) => {
-    const novaTar = req.body
-    fs.readFile('../dados/users.json', 'utf8', (err, data) => {
+
+    fs.readFile('./private/data/users.json', 'utf8', (err, data) => {
         if (err) {
-            res.status(500).send('Erro ao ler o arquivo')
+            res.status(500).json({ message: 'Erro ao ler o arquivo de usuários.' })
             return
         } try {
-            const dados = JSON.parse(data)
-            dados.push(novaTar)
-            fs.writeFile('../dados/users.json', JSON.stringify(dados, null, 2), (err) => {
-                if (err) {
-                    res.status(500).send('Erro ao adicionar o item')
-                    return
-                } try {
-                    res.status(200).send('Nova tarefa adicionada com sucesso!')
-                } catch (parseErr) {
-                    res.status(500).send('Erro ao adicionar a tarefa', parseErr)
+            const senha = req.body.senha
+            const cpf = req.body.cpf
+            const users = JSON.parse(data)
+            if (users.some(user => user.cpf === cpf && user.senha === senha)) {
+                return res.status(200).json({ message: 'Login realizado com sucesso!' })
+
+            } else if (users.some(user => user.cpf === cpf && user.senha !== senha)) {
+                return res.status(401).json({ message: 'Senha incorreta. Por favor, tente novamente.' })
+
+            } else if (users.some(user => user.cpf !== cpf)) {
+                    return res.status(404).json({ message: 'CPF não encontrado. Por favor, verifique e tente novamente.' })
                 }
-            })
-        } catch (parseErr) {
-            res.status(500).send('Erro ao traduzir o arquivo', parseErr)
+    } catch (parseErr) {
+            res.status(500).json({ message: 'Erro ao processar os dados de usuários.', parseErr })
         }
     })
 })

@@ -729,7 +729,52 @@ a {
     transition: 1s ease;
 }
 
-@media (max-width:430px) {
+#validacaocpf{
+    font-size: 13px;
+}
+
+#validacaosenha {
+    font-size: 13px;
+    position: absolute;
+}
+
+#validarNome {
+    font-size: 13px;
+}
+
+@media (max-width:800px) {
+    .imgDoCadastro{
+        height: 935px;
+    }
+    .formCadastro {
+        width: 620px;
+        height: 720px;
+    }
+
+    .textoEmCimaInp {
+        margin-top: 10px;
+        width: 470px;
+    }
+
+    .textoEmCimaInp input {
+        padding: 10px;
+        width: 470px;
+    }
+
+    .textoEmCimaInp2 {
+        margin-top: 10px;
+        width: 470px;
+    }
+
+    .textoEmCimaInp2 input {
+        padding: 10px;
+        width: 220px;
+    }
+
+}
+
+
+@media (max-width:530px) {
     .imgDoCadastro{
         height: 935px;
     }
@@ -756,6 +801,239 @@ a {
     .textoEmCimaInp2 input {
         padding: 10px;
         width: 175px;
+    }
+
+    #validacaocpf{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:400px) {
+    .imgDoCadastro{
+        height: 775px;
+    }
+    .formCadastro {
+        width: 350px;
+        height: 620px;
+    }
+
+    .textoEmCimaInp {
+        margin-top: 10px;
+        width: 270px;
+    }
+
+    .textoEmCimaInp input {
+        padding: 5px;
+        width: 270px;
+    }
+
+    .textoEmCimaInp2 {
+        margin-top: 10px;
+        width: 270px;
+    }
+
+    .textoEmCimaInp2 input {
+        padding: 5px;
+        width: 100px;
+    }
+
+
+    h5{
+        font-size: 15px;
+    }
+
+    .botaoCadastrar{
+            bottom: 30px;
+    }
+}
+
+/* ------------------------------------------- página do cadastro */
+
+
+.imgDoLogin {
+    background: url(../images/imagemLogin/EternalMed.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1090px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #05805f solid 2vw;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #538d7fc2;
+    width: 580px;
+    height: 450px;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 1px 1px 20px #01241a;
+    backdrop-filter: blur(4px);
+}
+
+.textoEmCimaInp {
+    margin-top: 1vw;
+    width: 420px;
+}
+
+.textoEmCimaInp input {
+    width: 420px;
+    border: none;
+    border-radius: 8px;
+    padding: .4vw;
+}
+
+.textoEmCimaInp2 {
+    margin-top: 1vw;
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.textoEmCimaInp2 input {
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    padding: .4vw;
+}
+
+.botaoLogin {
+    margin-top: 40px;
+    border: none;
+    background-color: #005e4588;
+    backdrop-filter: blur(4px);
+    box-shadow: 1px 1px 10px #00000066;
+    color: #ffffff;
+    width: 240px;
+    height: 50px;
+    border-radius: 30px;
+    transition: 1s ease;
+}
+
+.botaoLogin:hover {   
+    color: #04f5b4;
+    background-color: #013023fa;
+    transition: 1s ease;
+}
+
+#validacaocpf{
+    font-size: 13px;
+}
+
+#validacaosenha {
+    font-size: 13px;
+    position: absolute;
+}
+
+#validarNome {
+    font-size: 13px;
+}
+
+@media (max-width:800px) {
+    .imgDoLogin{
+        height: 935px;
+    }
+    .formLogin {
+        width: 520px;
+        height: 420px;
+    }
+
+    .textoEmCimaInp {
+        margin-top: 10px;
+        width: 470px;
+    }
+
+    .textoEmCimaInp input {
+        padding: 10px;
+        width: 470px;
+    }
+
+    .textoEmCimaInp2 {
+        margin-top: 10px;
+        width: 470px;
+    }
+
+    .textoEmCimaInp2 input {
+        padding: 10px;
+        width: 220px;
+    }
+
+}
+
+
+@media (max-width:530px) {
+    .imgDoLogin{
+        height: 935px;
+    }
+    .formLogin {
+        width: 420px;
+        height: 420px;
+    }
+
+    .textoEmCimaInp {
+        margin-top: 10px;
+        width: 370px;
+    }
+
+    .textoEmCimaInp input {
+        padding: 10px;
+        width: 370px;
+    }
+
+    .textoEmCimaInp2 {
+        margin-top: 10px;
+        width: 370px;
+    }
+
+    .textoEmCimaInp2 input {
+        padding: 10px;
+        width: 175px;
+    }
+
+    #validacaocpf{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:400px) {
+    .imgDoLogin{
+        height: 775px;
+    }
+    .formLogin {
+        width: 350px;
+        height: 350px;
+    }
+
+    .textoEmCimaInp {
+        margin-top: 10px;
+        width: 270px;
+    }
+
+    .textoEmCimaInp input {
+        padding: 5px;
+        width: 270px;
+    }
+
+    .textoEmCimaInp2 {
+        margin-top: 10px;
+        width: 270px;
+    }
+
+    .textoEmCimaInp2 input {
+        padding: 5px;
+        width: 100px;
+    }
+
+
+    h5{
+        font-size: 15px;
+    }
+
+    .botaoLogin{
+            bottom: 30px;
     }
 }
 
