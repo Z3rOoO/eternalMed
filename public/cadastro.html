@@ -109,7 +109,7 @@
                         </div>
                         <div>
                             <h5>Data de Nascimento</h5>
-                            <input type="text" name="dataNasc" id="dataNasc" required placeholder="DD/MM/AAAA" maxlength="10" >
+                            <input type="date" name="dataNasc" id="dataNasc" required >
                         </div>
 
                     </div>
@@ -124,19 +124,117 @@
                         <input type="password" name="confirmaSenha" id="confirmaSenha" required>
                         <div id="validacaosenha"></div>
                     </div>
-
-                    <div class="AliBtnFormCad">
-                        <a href="#" class="botaoLogar">Logar</a>
-                        <button type="submit" class="botaoCadastrar">Cadastrar</button>
-                    </div>
-
+                        <button type="submit" class="botaoCadastrar" >Cadastrar</button>
             </div>
 
         </div>
     </div>
     </div>
 
-    <!-- footer -->
+        <!-- footer -->
+
+        <div class="container-fluid mt-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                            style="background-color: #b8d6ce">
+                            Quem somos?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" style="color: #b8d6ce"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Somos uma que <strong>FACILITA</strong> seus <strong>AGENDAMENTOS E CONSULTAS</strong>. A
+                            <strong>EternalMed</strong> é uma empresa de medicina especializada em serviços como,
+                            nutricionista, fisioterapia, quiropraxia. Além disso nossos clientes conseguem comprar
+                            remédios
+                            e agendar consultas de uma forma rápida e fácil.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                            style="background-color: #a2cfc3">
+                            O que fazemos?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                        style="color: #a2cfc3">
+                        <div class="accordion-body">
+                            A <strong>EthernalMed</strong> promove a <strong>saúde</strong> e o
+                            <strong>bem-estar</strong>
+                            dos clientes acima de tudo, nosso catálogo é composto tanto por remédios, até por serviços
+                            particulares e especializados como, quiropraxia, nutricionista e muito mais.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                            style="background-color: #8ac9b8">
+                            Venha ser um colaborador!
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                        style="color: #8ac9b8">
+                        <div class="accordion-body">
+                            Agora a <strong>EternalMed</strong> está aprovando parcerias com novas empresas. Basta nos
+                            enviar um email: <strong>eternalmedcolaborador@gmail.com</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                            style="background-color: #74c5af">
+                            Contate-nos
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                        style="color: #74c5af">
+                        <div class="accordion-body">
+                            A <strong>EternalMed</strong> possui diversos meios de comunicação.<br>Telefone - 99
+                            99999-9999<br>Email - eternalmed@gmail.com<br>Instagram - @EthernalMed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col ">
+                    <footer
+                        class=" justify-content-between align-items-center py-2 my-4 border-top border-success border-3 footer">
+                        <p class="col-md-4 mb-0 px-3 arroba" style="color: #538d7f;">© 2025 EternalMed, Inc </p> <a
+                            href="/"
+                            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+                            aria-label="Bootstrap">
+                            <img class="bi img " width="30" aria-hidden="true" src="images/EternalMed.png">
+
+                        </a>
+
+                        <ul class="nav col-md-4 col-sm-12  justify-content-end px-3 navFooter">
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">Home</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">Features</a>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">Pricing</a>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">FAQs</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #538d7f">About</a></li>
+                        </ul>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+
 
     
     <!-- script do menu -->

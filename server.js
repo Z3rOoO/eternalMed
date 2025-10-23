@@ -5,6 +5,7 @@ const path = require('path');
 const loginPath = require('./private/routes/login');
 const cadastroPath = require('./private/routes/cadastro');
 const userPath = require('./private/routes/user');
+const logger =  require('./private/middlewares/logger');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use('/api/login', loginPath);
 app.use('/api/cadastro', cadastroPath);
 app.use('/api/users', userPath);
 
+app.use(logger);
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'index.html'));

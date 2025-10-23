@@ -41,21 +41,6 @@ nome.addEventListener('input', () => { // função para validar o nome enquanto 
     }
 })
 
-// --------------------------------------------------------------------------------------------------------------------- DATA DE NASCIMENTO
-
-dataNasc.addEventListener('input', () => { // função para validar a data de nascimento enquanto digita
-    let data = dataNasc.value.replace(/\D/g, '').slice(0, 8);
-    // formatação da data de nascimento
-
-    if (data.length > 2) {  // adiciona a barra após o segundo dígito
-        data = data.slice(0, 2) + '/' + data.slice(2);
-    }
-    if (data.length > 5) { // adiciona a barra após o quarto dígito
-        data = data.slice(0, 5) + '/' + data.slice(5);
-    }
-    dataNasc.value = data;
-})
-
 // ----------------------------------------------------------------------------------------------------- telefone
 
 tel.addEventListener('input', () => { // função para validar o telefone enquanto digita
