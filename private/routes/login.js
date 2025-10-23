@@ -16,10 +16,9 @@ router.post('/', autenticar, (req, res) => {
             if (users.some(user => user.cpf === cpf && user.senha === senha)) {
                 const user = users.find(user => user.cpf === cpf)
                 return res.status(200).json({ message: 'Login realizado com sucesso!',
-                    id: user.id
-                 })
+                    id: user.id})
             } else if (users.some(user => user.cpf === cpf && user.senha !== senha)) {
-                return res.status(401).json({ message: 'Senha incorreta. Por favor, tente novamente.' })
+                return res.status(401).json({ message: 'Senha incorreta. Por favor, tente novamente.' })    
 
             } else if (users.some(user => user.cpf !== cpf)) {
                     return res.status(404).json({ message: 'CPF não encontrado. Por favor, verifique e tente novamente.' })

@@ -26,8 +26,8 @@
                     style="width: 50%; max-width: 610px; background: #dfece9; border-radius: 1vw;">
                     <!-- barra de navegação -->
                     <form class="d-flex" role="search">
-                        <button type="submit" style="background: transparent; border: none;"><img
-                                src="/images/lupa.png" alt="pesquisar" width="18"></button>
+                        <button type="submit" style="background: transparent; border: none;"><img src="/images/lupa.png"
+                                alt="pesquisar" width="18"></button>
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             style="background: transparent; border: none; box-shadow: none;" />
                         <button type="submit" style="background: transparent; border: none;"><img
@@ -130,7 +130,7 @@
                                             <h1>SEGURO</h1>
                                         </div>
                                         <div class="col-4 colTopHomeNav off"
-                                            data-num='{"class":"funeraria","titulo":"FUNERÁRIA","descricao":"Compre seus remédios","button":"Ver Medicamentos","link":"#"}'>
+                                            data-num='{"class":"funeraria","titulo":"FUNERÁRIA","descricao":"Você Morreu","button":"enterrar","link":"#"}'>
                                             <img src="/images/homeImages/funeraria.png" alt="">
                                             <h1>FUNERÁRIA</h1>
                                         </div>
@@ -145,7 +145,7 @@
                                                 <div class="container">
                                                     <div class="row rowImgConteudo">
                                                         <div class="col imgConteudo">
-                                                            <h1>agenda</h1>
+                                                            <h1>ETERNALMED</h1>
                                                         </div>
                                                     </div>
                                                     <div class="row rowTextConteudo">
@@ -158,7 +158,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="row rowButtonConteudo">
-                                                        <div class="col colButtonConteudo"><a href=""><button>cadastrar</button></a></div>
+                                                        <div class="col colButtonConteudo"><a
+                                                                href=""><button>cadastrar</button></a></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -180,9 +181,55 @@
                 <div class="col"></div>
             </div>
         </div>
+        <div class="container-fluid"> <!-- primeiro banner -->
+            <div class="row">
+                <div class="col p-0"
+                    style="margin-top: 55px; background: #e0e8e6; display: flex; align-items: center; justify-content: center;">
+                    <div class="row-3">
+                        <h1 class="textoBanner">FACILITE <span>SUAS</span> CONSULTAS <span>COM A</span> ETERNALMED
+                        </h1>
+                    </div>
+
+
+                    <img src=" /images/bannerIndex/doisPersonagemConsulta.png" alt="doisPersonagensConsulta"
+                        style="min-width: 230px; max-width: 800px;"> <!-- imagem personagens da apresentação-->
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-5">
+            <div class="row" style="margin-top: 5vw;">
+                <div class="col">
+                    <h1 class="balaoUmIndex">Quem somos?</h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 15vw;">
+                <div class="col">
+                    <h1 class="balaoDoisIndex">Somos uma empresa que facilita seus agendamentos e consultas.</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="margin-top: 25vw;"> <!-- segundo banner-->
+            <div class="row">
+                <div class="col p-0"
+                    style=" background: #e0e8e6; display: flex; align-items: center; justify-content: space-between; min-height: 215px; max-height: 600px;">
+                    <div style="margin-left: 15vw;">
+                        <div class="row-12">
+                            <h1 class="textoBanner2">Venha ser um dos nossos colaboradores</h1>
+                        </div>
+                        <div class="row-12">
+                            <h1 class="mt-5"><a href="#" class="btnContato">Entrar em contato!</a></h1>
+                        </div>
+                    </div>
+                    <img src=" /images/bannerIndex/personagemComMic.png" alt="personagemComMic"
+                        class="personagemMic"><!-- imagem personagem com microfone-->
+                </div>
+            </div>
+        </div>
     </main>
     <div class="container-fluid">
-        <div class="accordion" id="accordionExample">
+        <div class="accordion container-md" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -289,7 +336,7 @@
             });
         });
     </script>
-    
+
     <script>
         const conteudo = document.getElementById('conteudo');
         const botoes = document.querySelectorAll('.rowTopHomeNav div');
@@ -315,7 +362,7 @@
                         </div>
                       </div>
                       <div class="row rowButtonConteudo">
-                        <div class="col">
+                        <div class="col colButtonConteudo">
                           <a href="${dados.link}">
                             <button>${dados.button}</button>
                           </a>

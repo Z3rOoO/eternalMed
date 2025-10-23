@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "nome": "Murilo do Nascimento",
+    "email": "m@yahoo.com",
+    "tel": "(11) 11111-1111",
+    "cpf": "111.111.111-11",
+    "dataNasc": "111111-11-11",
+    "senha": "123123123",
+    "id": 1761241516221
+  },
+  {
+    "nome": "Arian monteiro",
+    "email": "Henrique.cosme@gmail.com",
+    "tel": "(11) 19234-3203",
+    "cpf": "121.212.111-11",
+    "dataNasc": "111111-11-11",
+    "senha": "123123123",
+    "id": 1761246423292
+  },
+  {
+    "nome": "lara moreira ",
+    "email": "m2@yahoo.com",
+    "tel": "(12) 12212-1212",
+    "cpf": "098.765.432-10",
+    "dataNasc": "222222-02-22",
+    "senha": "123123123",
+    "id": 1761246791755
+  },
+  {
+    "nome": "murilo dos nascimentos",
+    "email": "Murilim@rei.com",
+    "tel": "(12) 12121-2121",
+    "cpf": "525.866.942-10",
+    "dataNasc": "2020-05-28",
+    "senha": "123321A@",
+    "id": 1761250264352
+  }
+]

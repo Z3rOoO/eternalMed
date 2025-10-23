@@ -6,6 +6,7 @@ const loginPath = require('./private/routes/login');
 const cadastroPath = require('./private/routes/cadastro');
 const userPath = require('./private/routes/user');
 const logger =  require('./private/middlewares/logger');
+const autenticar =  require('./private/middlewares/autenticacao');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -24,7 +25,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'index.html'));
 });
 app.get('/home/:id', (req, res) => {
-  req.params.id;
+  const id = req.params.id;
   res.sendFile(path.join(__dirname, 'public' , 'home.html'));
 });
 app.get('/cadastro', (req, res) => {

@@ -77,17 +77,20 @@ body {
     padding: 10px;
     gap: 10px;
 }
+
 .colTopHomeNav img {
     width: 50px;
     height: 50px;
     object-fit: contain;
 }
+
 .colTopHomeNav h1 {
     text-align: center;
     padding: 0;
     margin: 0;
     font-size: 1vw;
 }
+
 .colTopHomeNav:hover {
     background-color: var(--colorVerdeClaro);
     cursor: pointer;
@@ -129,7 +132,7 @@ body {
 }
 
 .rowImgConteudo {
-    background-image: url(../images/bannerIndex/doisPersonagemConsulta.png);
+    background-image: url(../images/homeImages/infoEternalMed.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -137,7 +140,7 @@ body {
     width: 100%;
     border-radius: 7px;
     overflow: hidden;
-    color: var(--colorFundo);
+    color: var(--colorVerdeEscuro);
     margin: 0;
     padding: 0;
     margin-top: 10px;
@@ -158,8 +161,9 @@ body {
     padding: 0;
     margin: 0;
     font-size: 3vw;
-    font-weight: bold;
-    backdrop-filter: blur(2px);
+    font-weight: 100;
+    backdrop-filter: blur(1px);
+
 }
 
 .rowTextConteudo {
@@ -200,67 +204,132 @@ body {
     transform: scale(1.02);
     transition: 0.3s;
 }
-.colButtonConteudo{
+
+.colButtonConteudo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 25px;
 }
+
 /* -------------------------------------- info top home class add ------------------------------------------------- */
 .consultas {
-    background-image: url(../images/homeImages/infoConsultas.png);
+    background-image: url(/images/homeImages/infoConsultas.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.consultas h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 .agendamento {
-    background-image: url(../images/homeImages/infoAgendamentos.png);
+    background-image: url(/images/homeImages/infoAgendamentos.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.agendamento h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 .quiropraxia {
-    background-image: url(../images/homeImages/infoQuiropraxia.png);
+    background-image: url(/images/homeImages/infoQuiropraxia.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.quiropraxia h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 .fisioterapia {
-    background-image: url(../images/homeImages/infoFisioterapia.png);
+    background-image: url(/images/homeImages/infoFisioterapia.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.fisioterapia h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 .psicologia {
-    background-image: url(../images/homeImages/infoPsicologia.png);
+    background-image: url(/images/homeImages/infoPsicologia.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.psicologia h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 .nutricionista {
-    background-image: url(../images/homeImages/infoNutricionista.png);
+    background-image: url(/images/homeImages/infoNutricionista.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.nutricionista h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 .seguro {
-    background-image: url(../images/homeImages/infoSeguro.png);
+    background-image: url(/images/homeImages/infoSeguro.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.seguro h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 .funeraria {
-    background-image: url(../images/homeImages/infoFuneraria.png);
+    background-image: url(/images/homeImages/infoFuneraria.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.funeraria h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 .farmacia {
-    background-image: url(../images/homeImages/infoFarmacia.png);
+    background-image: url(/images/homeImages/infoFarmacia.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.farmacia h1 {
+    font-weight: 100;
+    color: var(--colorFundo);
+    backdrop-filter: brightness(80%) blur(2px);
+}
+
 /* -------------------------------------- responsividade top home */
 
 @media (max-width: 1400px) {
@@ -723,13 +792,13 @@ a {
     transition: 1s ease;
 }
 
-.botaoCadastrar:hover {   
+.botaoCadastrar:hover {
     color: #04f5b4;
     background-color: #013023fa;
     transition: 1s ease;
 }
 
-#validacaocpf{
+#validacaocpf {
     font-size: 13px;
 }
 
@@ -743,9 +812,10 @@ a {
 }
 
 @media (max-width:800px) {
-    .imgDoCadastro{
+    .imgDoCadastro {
         height: 935px;
     }
+
     .formCadastro {
         width: 620px;
         height: 720px;
@@ -775,9 +845,10 @@ a {
 
 
 @media (max-width:530px) {
-    .imgDoCadastro{
+    .imgDoCadastro {
         height: 935px;
     }
+
     .formCadastro {
         width: 420px;
         height: 720px;
@@ -803,15 +874,16 @@ a {
         width: 175px;
     }
 
-    #validacaocpf{
+    #validacaocpf {
         font-size: 12px;
     }
 }
 
 @media (max-width:400px) {
-    .imgDoCadastro{
+    .imgDoCadastro {
         height: 775px;
     }
+
     .formCadastro {
         width: 350px;
         height: 620px;
@@ -838,12 +910,12 @@ a {
     }
 
 
-    h5{
+    h5 {
         font-size: 15px;
     }
 
-    .botaoCadastrar{
-            bottom: 30px;
+    .botaoCadastrar {
+        bottom: 30px;
     }
 }
 
@@ -913,13 +985,13 @@ a {
     transition: 1s ease;
 }
 
-.botaoLogin:hover {   
+.botaoLogin:hover {
     color: #04f5b4;
     background-color: #013023fa;
     transition: 1s ease;
 }
 
-#validacaocpf{
+#validacaocpf {
     font-size: 13px;
 }
 
@@ -933,9 +1005,10 @@ a {
 }
 
 @media (max-width:800px) {
-    .imgDoLogin{
+    .imgDoLogin {
         height: 935px;
     }
+
     .formLogin {
         width: 520px;
         height: 420px;
@@ -965,9 +1038,10 @@ a {
 
 
 @media (max-width:530px) {
-    .imgDoLogin{
+    .imgDoLogin {
         height: 935px;
     }
+
     .formLogin {
         width: 420px;
         height: 420px;
@@ -993,15 +1067,16 @@ a {
         width: 175px;
     }
 
-    #validacaocpf{
+    #validacaocpf {
         font-size: 12px;
     }
 }
 
 @media (max-width:400px) {
-    .imgDoLogin{
+    .imgDoLogin {
         height: 775px;
     }
+
     .formLogin {
         width: 350px;
         height: 350px;
@@ -1028,12 +1103,12 @@ a {
     }
 
 
-    h5{
+    h5 {
         font-size: 15px;
     }
 
-    .botaoLogin{
-            bottom: 30px;
+    .botaoLogin {
+        bottom: 30px;
     }
 }
 

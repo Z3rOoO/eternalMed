@@ -15,9 +15,7 @@ form.addEventListener('submit', async (e) => {
 
     if (res.ok) {
         // Login bem-sucedido
-        alert('Login realizado com sucesso!');
-        window.location.href = `/home/${data.id}`; // Redireciona para a página do dashboard
-
+        window.location.href = `/home/${data.id}`; 
     } else {
         // Falha no login
         alert(data.message || 'Falha no login. Por favor, tente novamente.');
