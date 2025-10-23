@@ -8,20 +8,21 @@ form.addEventListener('submit', async (e) => {
 
     const res = await fetch('/api/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': 'bah'},
-        body: JSON.stringify({ cpf, senha })
+        headers: { 'Content-Type': 'application/json', 'Authorization': 'bah' },
+        body: JSON.stringify({ cpf, senha})
     });
     const data = await res.json();
 
     if (res.ok) {
         // Login bem-sucedido
         alert('Login realizado com sucesso!');
-        window.location.href = '/home'; // Redireciona para a página do dashboard
+        window.location.href = `/home/${data.id}`; // Redireciona para a página do dashboard
+
     } else {
         // Falha no login
         alert(data.message || 'Falha no login. Por favor, tente novamente.');
     }
-}) 
+})
 
 // ----------------------------------------------------------------------------- VALIDAÇÃO DO CPF
 
@@ -36,7 +37,7 @@ cpf.addEventListener('input', () => { // função para validar o cpf enquanto di
         validarcpf.innerText = ''; // caso tenha 11 digitos, não mostra nada
     }
 
-    
+
     // formatação do cpf
 
     if (valor.length > 3) {  // adiciona o ponto após o terceiro dígito
@@ -48,12 +49,12 @@ cpf.addEventListener('input', () => { // função para validar o cpf enquanto di
     if (valor.length > 11) { // adiciona o hífen após o nono dígito
         valor = valor.slice(0, 11) + '-' + valor.slice(11);
     }
-        cpf.value = valor;
+    cpf.value = valor;
 
 
 })
 
-    cpf.addEventListener('keypress', (e) => { // previne que o usuário possa digitar letras no campo do cpf
+cpf.addEventListener('keypress', (e) => { // previne que o usuário possa digitar letras no campo do cpf
     const char = String.fromCharCode(e.which || e.keyCode);
     if (!/[0-9]/.test(char)) e.preventDefault();
 });
