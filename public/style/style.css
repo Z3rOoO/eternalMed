@@ -76,6 +76,7 @@ body {
     align-items: center;
     padding: 10px;
     gap: 10px;
+    box-shadow: 1px 1px 5px #01241a41;
 }
 
 .colTopHomeNav img {
@@ -89,6 +90,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 1vw;
+    
 }
 
 .colTopHomeNav:hover {
@@ -96,6 +98,7 @@ body {
     cursor: pointer;
     transform: scale(1.02);
     transition: 0.3s;
+    box-shadow: 2px 2px 15px #01241a41;
 }
 
 .cor {
@@ -104,6 +107,7 @@ body {
     cursor: pointer;
     transform: scale(1.02);
     transition: 0.3s;
+    box-shadow: 2px 2px 15px #01241a41;
 }
 
 .cor:hover {
@@ -112,6 +116,7 @@ body {
     cursor: pointer;
     transform: scale(1.02);
     transition: 0.3s;
+    
 }
 
 /* -------------------------------------- info top home ------------------------------------------------- */
@@ -210,6 +215,10 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 25px;
+}
+
+.boxShadow {
+    box-shadow: 1px 1px 5px #01241a41;
 }
 
 /* -------------------------------------- info top home class add ------------------------------------------------- */
@@ -329,7 +338,33 @@ body {
     color: var(--colorFundo);
     backdrop-filter: brightness(80%) blur(2px);
 }
+/* -------------------------------------- novidade home ------------------------------------------------- */
+.navi{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.colNovi {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--colorVerdeEscuro);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card1 {
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
 
+}
+.card2 {
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
 /* -------------------------------------- responsividade top home */
 
 @media (max-width: 1400px) {
