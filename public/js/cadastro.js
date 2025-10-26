@@ -92,7 +92,12 @@ form.addEventListener('submit', async (e) => { //função de submit do form
     const conSenha = document.getElementById('confirmaSenha').value; //pega o valor da confirmação de senha
     const validarSenha = document.getElementById('validacaosenha'); //pega o id da validação de senha
     const id = Date.now(); // cria um id único baseado no horário atual
-    const prescricao = null
+    const prescricao = [{
+        'medico': null,
+        'titulo': null,
+        'descricao': null
+    }]
+
     if (senha !== conSenha) { //verifica se a senha e a confirmação de senha são iguais
         validarSenha.innerText = 'As senhas não coincidem. Por favor, tente novamente.'; //mostra a mensagem de erro
         return;

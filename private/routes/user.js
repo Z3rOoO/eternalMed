@@ -48,12 +48,11 @@ router.put('/:id', autenticar, (req, res) => {
             return
         } try {
             const dados = JSON.parse(data)
-            const index = dados.findIndex(tar => tar.id === id)
+            const index = dados.findIndex(tar => tar.id === Number(req.params.id))
             dados[index] = {
-                id, ...editTar
+                ...dados[index],
+                ...editTar
             }
-
-
             fs.writeFile('./private/data/users.json', JSON.stringify(dados, null, 2), (err) => {
                 if (err) {
                     res.status(500).send('Erro ao adicionar o item')
