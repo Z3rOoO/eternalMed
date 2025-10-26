@@ -91,8 +91,8 @@ form.addEventListener('submit', async (e) => { //função de submit do form
     const senha = document.getElementById('senha').value; //pega o valor da senha
     const conSenha = document.getElementById('confirmaSenha').value; //pega o valor da confirmação de senha
     const validarSenha = document.getElementById('validacaosenha'); //pega o id da validação de senha
-    id = Date.now(); // cria um id único baseado no horário atual
-
+    const id = Date.now(); // cria um id único baseado no horário atual
+    const prescricao = null
     if (senha !== conSenha) { //verifica se a senha e a confirmação de senha são iguais
         validarSenha.innerText = 'As senhas não coincidem. Por favor, tente novamente.'; //mostra a mensagem de erro
         return;
@@ -120,7 +120,7 @@ form.addEventListener('submit', async (e) => { //função de submit do form
     const res = await fetch('/api/cadastro', { // curl direto no fetch
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': 'bah' },
-        body: JSON.stringify({ nome, email, tel, cpf, dataNasc, senha, id})
+        body: JSON.stringify({ nome, email, tel, cpf, dataNasc, senha, id, prescricao})
     })
 
     const data = await res.json();

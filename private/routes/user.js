@@ -4,7 +4,7 @@ const autenticar = require('../middlewares/autenticacao')
 const router = express.Router()
 
 router.get('/', autenticar, (req, res) => {
-    fs.readFile('../dados/users.json', 'utf8', (err, data) => {
+    fs.readFile('./private/data/users.json', 'utf8', (err, data) => {
         if (err) {
             res.status(500).send('Erro ao ler o arquivo')
             return
@@ -18,14 +18,15 @@ router.get('/', autenticar, (req, res) => {
 })
 
 router.get('/:id', autenticar, (req, res) => {
-    fs.readFile('../dados/users.json', 'utf8', (err, data) => {
+    fs.readFile('./private/data/users.json', 'utf8', (err, data) => {
         if (err) {
             res.status(500).send('Erro ao ler o arquivo')
             return
         } try {
             const dados = JSON.parse(data)
             const tarefa = dados.find(function (tar) {
-                return tar.id === id
+                console.log(req.params.id)
+                return tar.id === Number(req.params.id)
             })
             res.status(200).json(tarefa)
         } catch (parseErr) {
@@ -40,7 +41,7 @@ router.put('/:id', autenticar, (req, res) => {
     const id = parseInt(req.params.id)
     const editTar = req.body
 
-    fs.readFile('../dados/users.json', 'utf8', (err, data) => {
+    fs.readFile('./private/data/users.json', 'utf8', (err, data) => {
         if (err) {
             res.status(500).send('Erro ao ler o arquivo')
             console.error('Ero ao ler o arquivo', err)
@@ -53,7 +54,7 @@ router.put('/:id', autenticar, (req, res) => {
             }
 
 
-            fs.writeFile('../dados/users.json', JSON.stringify(dados, null, 2), (err) => {
+            fs.writeFile('./private/data/users.json', JSON.stringify(dados, null, 2), (err) => {
                 if (err) {
                     res.status(500).send('Erro ao adicionar o item')
                     console.error('Erro ao ler o arquivo', err)
@@ -71,19 +72,20 @@ router.put('/:id', autenticar, (req, res) => {
 router.delete('/:id', autenticar, (req, res) => {
     const id = parseInt(req.params.id)
 
-    fs.readFile('../dados/users.json', 'utf8', (err, data) => {
+    fs.readFile('./private/data/users.json', 'utf8', (err, data) => {
         if (err) {
             res.status(500).send('Erro ao ler o arquivo')
             console.error('Erro ao ler o arquivo', err)
             return
         } try {
+            
             const dados = JSON.parse(data)
             const index = dados.findIndex(tar => tar.id === id)
 
             dados.splice(index, 1)
 
 
-            fs.writeFile('../dados/users.json', JSON.stringify(dados, null, 2), (err) => {
+            fs.writeFile('./private/data/users.json', JSON.stringify(dados, null, 2), (err) => {
                 if (err) {
                     res.status(500).send('Erro ao adicionar o item')
                     console.error('Erro ao ler o arquivo', err)
