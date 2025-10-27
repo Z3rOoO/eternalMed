@@ -90,7 +90,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 1vw;
-    
+
 }
 
 .colTopHomeNav:hover {
@@ -116,7 +116,7 @@ body {
     cursor: pointer;
     transform: scale(1.02);
     transition: 0.3s;
-    
+
 }
 
 /* -------------------------------------- info top home ------------------------------------------------- */
@@ -338,14 +338,16 @@ body {
     color: var(--colorFundo);
     backdrop-filter: brightness(80%) blur(2px);
 }
+
 /* -------------------------------------- novidade home ------------------------------------------------- */
-.navi{
+.navi {
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .colNovi {
     font-size: 40px;
     font-weight: bold;
@@ -354,17 +356,20 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 .card1 {
     border: none;
     border-radius: 15px;
     transition: 0.3s;
 
 }
+
 .card2 {
     border: none;
     border-radius: 15px;
     transition: 0.3s;
 }
+
 /* -------------------------------------- responsividade top home */
 
 @media (max-width: 1400px) {
@@ -1147,6 +1152,143 @@ a {
     }
 }
 
+/*--------Consulta Medico-------------*/
+
+#bodyConsultaMed{
+    background: #065f46;
+}
+
+.containerDoFormMed {
+    background: var(--colorVerdeEscuro);
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 850px;
+}
+.containerDoFormMed img {
+    position: absolute;
+    width: 35vw;
+    left: 10px;
+    bottom: 0px;
+}
+
+.form-consulta {
+    z-index: 2;
+    background: linear-gradient(120deg, #538d7f, #06553e 99%);
+    box-shadow: 1px 1px 10px #000000ab;
+    border: 3px solid #04f5b4;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-consulta h2 {
+    display: flex;
+    justify-content: center;
+    text-shadow: 1px 1px 20px #01241a;
+}
+
+.form-cadastro h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.botoesMed {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #06553e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+    backdrop-filter: blur(2px);
+    box-shadow: 1px 1px 10px #01241a;
+}
+
+
+button:hover {
+    background-color: #01241a;
+    color: #04f5b4;
+    transition: 1s;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+@media(max-width:900px) {
+    .containerDoFormMed img {
+        display: none;
+        position: absolute;
+        left: 10px;
+        bottom: 0px;
+    }
+}
+
+/* ------------------------------------------- medicamento */
+
+
+.prescricaoMed{
+    margin-top: 100px;
+    z-index: 2;
+    background: linear-gradient(120deg, #133a31, #06553e 99%);
+    box-shadow: 1px 1px 10px #000000ab;
+    border: 3px solid #04f5b4;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.prescricaoMed h1{
+}
+
+
 /* ------------------------------------------- footer */
 .footer {
     display: flex;
@@ -1183,5 +1325,3 @@ a {
 
 
 }
-
-/*------------------------------------------Login--------------------------------------*/

@@ -8,12 +8,12 @@ fetch(`/api/users/${userID}`, {
     .then(response => response.json())
     .then(data => {
         console.log(data.prescricao[0].medico)
-        if (data.prescricao[0].titulo === null && data.prescricao[0].descricao === null && data.prescricao[0].medico === null){
+        if (data.prescricao[0].titulo === null || data.prescricao[0].descricao === null || data.prescricao[0].medico === null){
             document.getElementById('medicoConsultaCard').style.display = 'none'
         }
         else {
             document.getElementById('medicoConsulta').innerHTML = `Médico(a) : ${data.prescricao[0].medico}`
-            document.getElementById('medicoConsultaLink').href = '/cadastro'
+            document.getElementById('medicoConsultaLink').href = `/home/consulta/medicamento/${userID}`
         }
     })
 

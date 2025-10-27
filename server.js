@@ -21,6 +21,8 @@ app.use('/api/users', userPath);
 
 app.use(logger);
 
+// parte do usuario/ paciente
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'index.html'));
 });
@@ -31,6 +33,10 @@ app.get('/home/consulta/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'consulta.html'));
 });
 
+app.get('/home/consulta/medicamento/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public' , 'prescricao.html'));
+});
+
 app.get('/cadastro', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'cadastro.html'));
 });
@@ -38,6 +44,14 @@ app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'login.html'));
 });
 
+// parte do médico 
+
+app.get('/medico/consulta', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public' , 'consultaMed.html'));
+});
+
+
+// listen
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
