@@ -1286,9 +1286,33 @@ textarea {
     gap: 10px;
 }
 
-.prescricaoMed h1{
+
+/* tela consulta do paciente */
+
+.moverAvisoConsulta{
+    height: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.avisoConsulta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.avisoConsulta h1{
+    font-size: 25px;
+    color: #05805fa8;
+    border-bottom: 2px solid #05805fa8;
+}
+
+#infoConsulta{
+    display: none;
+}
 
 /* ------------------------------------------- footer */
 .footer {

@@ -8,6 +8,7 @@ fetch(`/api/users/${userID}`, {
         console.log(data.prescricao[0].medico)
         if (data.prescricao[0].titulo === null && data.prescricao[0].descricao === null && data.prescricao[0].medico === null){
             document.getElementById('medicoConsultaCard').style.display = 'none'
+            
         }
         else {
             document.getElementById('medicamentoP').innerHTML = `${data.prescricao[0].titulo}`
