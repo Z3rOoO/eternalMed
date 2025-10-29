@@ -13,9 +13,14 @@ form.addEventListener('submit', async (e) => {
     });
     const data = await res.json();
 
-    if (res.ok) {
-        // Login bem-sucedido
-        window.location.href = `/home/${data.id}`; 
+    if (res.ok) { // Login bem-sucedido
+        console.log(data.tipo)
+        if (data.tipo === 'M' ){
+            window.location.href = `/medico/consulta/${data.id}`; 
+        }
+        else {
+            window.location.href = `/home/${data.id}`; 
+        }
     } else {
         // Falha no login
         alert(data.message || 'Falha no login. Por favor, tente novamente.');

@@ -1237,13 +1237,13 @@ input {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #06553e;
+    background-color: #10a57b8e;
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: .5s;
     backdrop-filter: blur(2px);
-    box-shadow: 1px 1px 10px #01241a;
+    box-shadow: 1px 1px 10px #01241a38;
 }
 
 

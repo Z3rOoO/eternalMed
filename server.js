@@ -46,7 +46,7 @@ app.get('/login', (req, res) => {
 
 // parte do médico 
 
-app.get('/medico/consulta', (req, res) => {
+app.get('/medico/consulta/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'consultaMed.html'));
 });
 

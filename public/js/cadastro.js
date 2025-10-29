@@ -92,6 +92,7 @@ form.addEventListener('submit', async (e) => { //função de submit do form
     const conSenha = document.getElementById('confirmaSenha').value; //pega o valor da confirmação de senha
     const validarSenha = document.getElementById('validacaosenha'); //pega o id da validação de senha
     const id = Date.now(); // cria um id único baseado no horário atual
+    const tipo = "P"
     const prescricao = [{
         'medico': null,
         'titulo': null,
@@ -125,7 +126,7 @@ form.addEventListener('submit', async (e) => { //função de submit do form
     const res = await fetch('/api/cadastro', { // curl direto no fetch
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': 'bah' },
-        body: JSON.stringify({ nome, email, tel, cpf, dataNasc, senha, id, prescricao})
+        body: JSON.stringify({ nome, email, tel, cpf, dataNasc, senha, id, tipo, prescricao})
     })
 
     const data = await res.json();
