@@ -51,6 +51,8 @@ app.get('/medico/consulta/:id', (req, res) => {
 });
 
 
+
+
 // listen
 
 app.listen(port, () => {
