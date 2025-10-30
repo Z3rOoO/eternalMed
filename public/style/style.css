@@ -1,13 +1,11 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family:'roboto' sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
     background-color: var(--colorFundo);
-
-
 }
 
 :root {
@@ -1155,18 +1153,24 @@ a {
 
 /*--------Consulta Medico-------------*/
 
-#bodyConsultaMed{
-    background: #065f46;
+.nomeMedTitulo{
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#bodyConsultaMed {
+    background: #002016;
 }
 
 .containerDoFormMed {
-    background: var(--colorVerdeEscuro);
-    margin-top: 50px;
+    background: linear-gradient(150deg, #538d7f, #06553e 99%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 850px;
 }
+
 .containerDoFormMed img {
     position: absolute;
     width: 35vw;
@@ -1214,6 +1218,15 @@ input {
     outline: none;
 }
 
+.inputDoEscolhaPaciente {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+
 .linha {
     display: flex;
     justify-content: space-between;
@@ -1258,6 +1271,33 @@ textarea {
     resize: vertical;
 }
 
+.form-select{
+    transition: 2s ease;
+}
+
+.form-select:focus{
+    border: 1px solid #04f5b4;
+    box-shadow: 1px 1px 5px #04f5b4;
+    outline: none;
+    transition: .5s ease;
+}
+
+#instrucoes{
+    transition: 2s ease;
+}
+
+#instrucoes:focus{  
+    outline: none;
+    border: 1px solid #04f5b4;
+    transition: .5s ease;
+}
+
+#nomeMed{
+    margin-left: 5px;
+    color: white;
+    font-size: 30px;
+}
+
 @media(max-width:900px) {
     .containerDoFormMed img {
         display: none;
@@ -1267,10 +1307,14 @@ textarea {
     }
 }
 
+
+
+
+
 /* ------------------------------------------- medicamento */
 
 
-.prescricaoMed{
+.prescricaoMed {
     margin-top: 100px;
     z-index: 2;
     background: linear-gradient(120deg, #133a31, #06553e 99%);
@@ -1289,28 +1333,28 @@ textarea {
 
 /* tela consulta do paciente */
 
-.moverAvisoConsulta{
+.moverAvisoConsulta {
     height: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.avisoConsulta{
+.avisoConsulta {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
-.avisoConsulta h1{
+.avisoConsulta h1 {
     font-size: 25px;
     color: #05805fa8;
     border-bottom: 2px solid #05805fa8;
 }
 
-#infoConsulta{
+#infoConsulta {
     display: none;
 }
 
