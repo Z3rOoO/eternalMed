@@ -32,6 +32,9 @@ app.get('/home/:id', (req, res) => {
 app.get('/home/consulta/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'consulta.html'));
 });
+app.get('/home/farmacia/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public' , 'medicamentos.html'));
+});
 
 app.get('/home/consulta/medicamento/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'prescricao.html'));
