@@ -1408,6 +1408,15 @@ textarea {
     padding: 20px;
 }
 
+.text-medicamentos {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: #05805f;
+    font-size: 36px;
+    font-weight: bold;
+}
+
 .img-produto {
     flex: 1;
     display: flex;
