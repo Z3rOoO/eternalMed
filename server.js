@@ -35,6 +35,9 @@ app.get('/home/consulta/:id', (req, res) => {
 app.get('/home/farmacia/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'medicamentos.html'));
 });
+app.get('/home/farmacia/eno/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public' , 'eno.html'));
+});
 
 
 app.get('/cadastro', (req, res) => {
