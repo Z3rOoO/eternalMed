@@ -32,10 +32,10 @@ app.get('/home/:id', (req, res) => {
 app.get('/home/consulta/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'consulta.html'));
 });
-
-app.get('/home/consulta/medicamento/:id', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public' , 'prescricao.html'));
+app.get('/home/farmacia/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public' , 'medicamentos.html'));
 });
+
 
 app.get('/cadastro', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'cadastro.html'));
@@ -43,6 +43,7 @@ app.get('/cadastro', (req, res) => {
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'public' , 'login.html'));
 });
+app.get('')
 
 // parte do médico 
 

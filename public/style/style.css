@@ -1,5 +1,5 @@
 body {
-    font-family:'roboto' sans-serif;
+    font-family: 'roboto' sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -197,15 +197,15 @@ body {
     font-size: 25px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s ease;
 }
 
 .rowButtonConteudo button:hover {
-    background-color: var(--colorVerdeMuitoClaro);
-    color: var(--colorFundo);
+    color: #04f5b4;
+    background-color: #013023fa;
     cursor: pointer;
     transform: scale(1.02);
-    transition: 0.3s;
+    transition: 0.5s ease;
 }
 
 .colButtonConteudo {
@@ -1153,35 +1153,40 @@ a {
 
 /*--------Consulta Medico-------------*/
 
-.nomeMedTitulo{
+.headerMed {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: 2px solid #6cc2ae;
+}
+
+.nomeMedTitulo {
     color: white;
     font-size: 20px;
     margin-top: 10px;
 }
 
 #bodyConsultaMed {
-    background: #002016;
+    background: #ffffff;
 }
 
 .containerDoFormMed {
-    background: linear-gradient(150deg, #538d7f, #06553e 99%);
+    background: url(../images/imagemLogin/EternalMed.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;   /*linear-gradient(150deg, #538d7f, #06553e 99%); */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 850px;
+    height: 981px;
 }
 
-.containerDoFormMed img {
-    position: absolute;
-    width: 35vw;
-    left: 10px;
-    bottom: 0px;
-}
+
 
 .form-consulta {
     z-index: 2;
-    background: linear-gradient(120deg, #538d7f, #06553e 99%);
-    box-shadow: 1px 1px 10px #000000ab;
+    background: linear-gradient(120deg, #538d7fbe, #06553fc5 99%);
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 10px #000000;
     border: 3px solid #04f5b4;
     padding: 30px;
     border-radius: 10px;
@@ -1271,40 +1276,31 @@ textarea {
     resize: vertical;
 }
 
-.form-select{
+.form-select {
     transition: 2s ease;
 }
 
-.form-select:focus{
+.form-select:focus {
     border: 1px solid #04f5b4;
     box-shadow: 1px 1px 5px #04f5b4;
     outline: none;
     transition: .5s ease;
 }
 
-#instrucoes{
+#instrucoes {
     transition: 2s ease;
 }
 
-#instrucoes:focus{  
+#instrucoes:focus {
     outline: none;
     border: 1px solid #04f5b4;
     transition: .5s ease;
 }
 
-#nomeMed{
+#nomeMed {
     margin-left: 5px;
     color: white;
-    font-size: 30px;
-}
-
-@media(max-width:900px) {
-    .containerDoFormMed img {
-        display: none;
-        position: absolute;
-        left: 10px;
-        bottom: 0px;
-    }
+    font-size: 22px;
 }
 
 
@@ -1471,30 +1467,30 @@ textarea {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-title {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .card img {
-  max-height: 180px;
-  object-fit: contain;
+    max-height: 180px;
+    object-fit: contain;
 }
 
 .card .btn {
-  margin-top: auto;
-  background-color: #05805f;
-  color: white;
+    margin-top: auto;
+    background-color: #05805f;
+    color: white;
 }

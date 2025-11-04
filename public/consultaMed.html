@@ -12,13 +12,41 @@
 </head>
 
 <body id="bodyConsultaMed">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col" style="display: flex; align-items: center;">
-                <p class="nomeMedTitulo" style="    color: #05805f;">médico(a) <span id="nomeMed"></span></p>
+     <header id="header"> <!-- cabeçalho do site -->
+        <nav class="navbar navbar-expand-lg"
+            style="background: white; border-bottom: 3px solid #538d7f; height: 55px; position: fixed; width: 100%; z-index: 1;">
+            <div class="container-fluid">
+                <div
+                    style="width: 130px; display: flex; align-items: center; justify-content: space-between; position: absolute;">
+                    <img src="/images/EternalMed.png" alt="logoEternalMed" width="24"> <a class="navbar-brand p-0"
+                        href="/" style="color: #538d7f; margin-right: 0;">EternalMed</a>
+                </div>
+                <!-- logo e titulo do header-->
+                <div class="container d-none d-sm-block"
+                    style="width: 50%; max-width: 610px; background: #dfece9; border-radius: 1vw;">
+                    <!-- barra de navegação -->
+                    <form class="d-flex" role="search">
+                        <button type="submit" style="background: transparent; border: none;"><img src="/images/lupa.png"
+                                alt="pesquisar" width="18"></button>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            style="background: transparent; border: none; box-shadow: none;" />
+                        <button type="submit" style="background: transparent; border: none;"><img
+                                src="/images/microfone.png" alt="pesquisar" width="18"></button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </div>
+        </nav>
+        <nav>
+            <div
+                style="width: 70px; position: absolute; right: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 4; height: 50px; position: fixed;">
+                <a href="#"><img src="/images/perfil.png" alt="perfil" width="30" id="perfil"
+                        style="transition: .2s;"></a>
+                <!-- botao perfil do header -->
+                <a onclick="menu" onclick="return false;" href="#"><img src="/images/menu.png" alt="perfil" width="26"
+                        id="menu" style="transition: .2s;"></a> <!-- botao menu do header-->
+            </div>
+        </nav>
+    </header>
         <div class="container-fluid containerDoFormMed">
             <form class="form-consulta" id="formMed">
                 <h2>Receitar Medicamento</h2>
@@ -27,7 +55,6 @@
                 <select id="nomeDosPacientes" class="form-select">
                     <option value="" disabled selected >Escolher</option>
                 </select>
-                <!-- <input type="text" placeholder="ID do paciente" id="idUser"> UTILIZAR ISSO PARA ADICIONAR PACIENTES VIA ID/ ARQUIVO-->
                 <label>Remédio</label>
                 <select class="form-select" aria-label="Default select example" id="remedio">
                     <option value="Sal de Fruta Eno" id="saldefrutaeno">Sal de Fruta Eno</option>
@@ -51,7 +78,6 @@
                     <button type="submit" class="botoesMed">Enviar</button>
                 </div>
             </form>
-            <img src="/images/bannerIndex/doisPersonagemConsulta.png" alt="dois Personagens em uma Consulta">
         </div>
 
 
